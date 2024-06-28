@@ -153,6 +153,33 @@
       "schem": "dbo",
       "type": "Table",
       "type_desc": "CLUSTERED"
+    },
+    {
+      "allow_page_locks": true,
+      "allow_row_locks": true,
+      "Columns": [
+        {
+          "is_descending_key": false,
+          "key_ordinal": 1,
+          "name": "id"
+        }
+      ],
+      "compression_delay": null,
+      "data_space_id": 1,
+      "fill_factor": 0,
+      "filter_definition": null,
+      "has_filter": false,
+      "ignore_dup_key": false,
+      "is_disabled": false,
+      "is_hypothetical": false,
+      "is_padded": false,
+      "is_primary_key": false,
+      "is_unique": false,
+      "name": "idx_employee_id",
+      "obj": "employee",
+      "schem": "dbo",
+      "type": "Table",
+      "type_desc": "NONCLUSTERED"
     }
   ]
 }
