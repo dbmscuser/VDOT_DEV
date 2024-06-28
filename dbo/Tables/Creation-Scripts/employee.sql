@@ -1,0 +1,16 @@
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[employee](
+	[id] [int] NOT NULL,
+	[name] [varchar](max) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+	[createddate] [datetime] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF)
+)
+GO
+ALTER TABLE [dbo].[employee] ADD  DEFAULT (getdate()) FOR [createddate]
+GO
