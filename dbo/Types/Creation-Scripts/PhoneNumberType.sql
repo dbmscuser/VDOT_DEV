@@ -1,0 +1,1 @@
+CREATE TYPE [dbo].[PhoneNumberType] FROM [varchar](15) NULL
