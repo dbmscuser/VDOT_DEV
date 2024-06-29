@@ -6,6 +6,7 @@ CREATE TABLE [dbo].[employee](
 	[id] [int] NOT NULL,
 	[name] [varchar](max) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 	[createddate] [datetime] NULL,
+	[dep_id] [int] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[id] ASC
@@ -18,4 +19,9 @@ CREATE NONCLUSTERED INDEX [idx_employee_id] ON [dbo].[employee]
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF)
 GO
 ALTER TABLE [dbo].[employee] ADD  DEFAULT (getdate()) FOR [createddate]
+GO
+ALTER TABLE [dbo].[employee]  WITH CHECK ADD  CONSTRAINT [FK_Employee_Department] FOREIGN KEY([dep_id])
+REFERENCES [dbo].[department] ([id])
+GO
+ALTER TABLE [dbo].[employee] CHECK CONSTRAINT [FK_Employee_Department]
 GO

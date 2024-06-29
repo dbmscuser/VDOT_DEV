@@ -1,5 +1,25 @@
 {
-  "Check constraints": [],
+  "Check constraints": [
+    {
+      "definition": "([CreatedDate]<=getdate())",
+      "is_disabled": false,
+      "is_ms_shipped": false,
+      "is_not_for_replication": false,
+      "is_not_trusted": false,
+      "is_published": false,
+      "is_schema_published": false,
+      "is_system_named": false,
+      "name": "CHK_CreatedDate",
+      "obj": "positions",
+      "parent_column_id": 3,
+      "principal_id": null,
+      "schem": "dbo",
+      "schema_id": 1,
+      "type": "Table",
+      "type_desc": "CHECK_CONSTRAINT",
+      "uses_database_collation": true
+    }
+  ],
   "Column": [
     {
       "collation_name": null,
@@ -7,7 +27,7 @@
       "column_encryption_key_id": null,
       "column_id": 3,
       "data_type": "datetime",
-      "default_object_id": 613577224,
+      "default_object_id": 885578193,
       "encryption_algorithm_name": null,
       "encryption_type": null,
       "encryption_type_desc": null,
@@ -32,7 +52,7 @@
       "is_xml_document": false,
       "max_length": 8,
       "name": "createddate",
-      "obj": "employee",
+      "obj": "positions",
       "precision": 23,
       "rule_object_id": 0,
       "scale": 3,
@@ -40,47 +60,6 @@
       "system_type_id": 61,
       "type": "Table",
       "user_type_id": 61,
-      "xml_collection_id": 0
-    },
-    {
-      "collation_name": null,
-      "column_encryption_key_database_name": null,
-      "column_encryption_key_id": null,
-      "column_id": 4,
-      "data_type": "int",
-      "default_object_id": 0,
-      "encryption_algorithm_name": null,
-      "encryption_type": null,
-      "encryption_type_desc": null,
-      "generated_always_type": 0,
-      "generated_always_type_desc": "NOT_APPLICABLE",
-      "graph_type": null,
-      "graph_type_desc": null,
-      "is_ansi_padded": false,
-      "is_column_set": false,
-      "is_computed": false,
-      "is_dts_replicated": false,
-      "is_filestream": false,
-      "is_hidden": false,
-      "is_identity": false,
-      "is_masked": false,
-      "is_merge_published": false,
-      "is_non_sql_subscribed": false,
-      "is_nullable": true,
-      "is_replicated": false,
-      "is_rowguidcol": false,
-      "is_sparse": false,
-      "is_xml_document": false,
-      "max_length": 4,
-      "name": "dep_id",
-      "obj": "employee",
-      "precision": 10,
-      "rule_object_id": 0,
-      "scale": 0,
-      "schem": "dbo",
-      "system_type_id": 56,
-      "type": "Table",
-      "user_type_id": 56,
       "xml_collection_id": 0
     },
     {
@@ -113,8 +92,8 @@
       "is_sparse": false,
       "is_xml_document": false,
       "max_length": 4,
-      "name": "id",
-      "obj": "employee",
+      "name": "position_id",
+      "obj": "positions",
       "precision": 10,
       "rule_object_id": 0,
       "scale": 0,
@@ -154,8 +133,8 @@
       "is_sparse": false,
       "is_xml_document": false,
       "max_length": -1,
-      "name": "name",
-      "obj": "employee",
+      "name": "position_name",
+      "obj": "positions",
       "precision": 0,
       "rule_object_id": 0,
       "scale": 0,
@@ -166,32 +145,7 @@
       "xml_collection_id": 0
     }
   ],
-  "Foreign keys": [
-    {
-      "colname": "id",
-      "column_id": 1,
-      "delete_referential_action": 0,
-      "delete_referential_action_desc": "NO_ACTION",
-      "fercol": "id",
-      "is_disabled": false,
-      "is_ms_shipped": false,
-      "is_not_for_replication": false,
-      "is_not_trusted": false,
-      "is_published": false,
-      "is_schema_published": false,
-      "is_system_named": false,
-      "key_index_id": 2,
-      "name": "FK_Employee_Department",
-      "obj": "employee",
-      "parent_column_id": 4,
-      "reftable": "department",
-      "schem": "dbo",
-      "type": "Table",
-      "type_desc": "FOREIGN_KEY_CONSTRAINT",
-      "update_referential_action": 0,
-      "update_referential_action_desc": "NO_ACTION"
-    }
-  ],
+  "Foreign keys": [],
   "Indexes": [
     {
       "allow_page_locks": true,
@@ -200,7 +154,7 @@
         {
           "is_descending_key": false,
           "key_ordinal": 1,
-          "name": "id"
+          "name": "position_id"
         }
       ],
       "compression_delay": null,
@@ -214,38 +168,11 @@
       "is_padded": false,
       "is_primary_key": true,
       "is_unique": true,
-      "name": "DBM_id_ASC",
-      "obj": "employee",
+      "name": "DBM_position_id_ASC",
+      "obj": "positions",
       "schem": "dbo",
       "type": "Table",
       "type_desc": "CLUSTERED"
-    },
-    {
-      "allow_page_locks": true,
-      "allow_row_locks": true,
-      "Columns": [
-        {
-          "is_descending_key": false,
-          "key_ordinal": 1,
-          "name": "id"
-        }
-      ],
-      "compression_delay": null,
-      "data_space_id": 1,
-      "fill_factor": 0,
-      "filter_definition": null,
-      "has_filter": false,
-      "ignore_dup_key": false,
-      "is_disabled": false,
-      "is_hypothetical": false,
-      "is_padded": false,
-      "is_primary_key": false,
-      "is_unique": false,
-      "name": "idx_employee_id",
-      "obj": "employee",
-      "schem": "dbo",
-      "type": "Table",
-      "type_desc": "NONCLUSTERED"
     }
   ]
 }
