@@ -1,0 +1,12 @@
+[
+  {
+    "schema": "dbo",
+    "name": "employee",
+    "type": "Table"
+  },
+  {
+    "schema": "dbo",
+    "name": "vw_employee",
+    "type": "View"
+  }
+]
