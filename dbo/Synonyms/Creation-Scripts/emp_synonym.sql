@@ -1,0 +1,1 @@
+CREATE SYNONYM [dbo].[emp_synonym] FOR [dbo].[Employee4]
