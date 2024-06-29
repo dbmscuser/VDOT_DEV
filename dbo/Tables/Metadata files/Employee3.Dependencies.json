@@ -1,0 +1,12 @@
+[
+  {
+    "schema": "dbo",
+    "name": "department",
+    "type": "Table"
+  },
+  {
+    "schema": "dbo",
+    "name": "positions",
+    "type": "Table"
+  }
+]
