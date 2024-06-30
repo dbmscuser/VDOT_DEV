@@ -1,0 +1,19 @@
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [Schema1].[employee](
+	[emp_id] [int] NOT NULL,
+	[emp_name] [varchar](max) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+	[deptid] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[emp_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF)
+)
+GO
+ALTER TABLE [Schema1].[employee]  WITH CHECK ADD  CONSTRAINT [Fk_employee_dept] FOREIGN KEY([deptid])
+REFERENCES [Schema2].[Department] ([deptid])
+GO
+ALTER TABLE [Schema1].[employee] CHECK CONSTRAINT [Fk_employee_dept]
+GO

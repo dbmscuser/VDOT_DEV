@@ -1,0 +1,17 @@
+[
+  {
+    "schema": "Schema1",
+    "name": "employee",
+    "type": "Table"
+  },
+  {
+    "schema": "Schema2",
+    "name": "Department",
+    "type": "Table"
+  },
+  {
+    "schema": "",
+    "name": "Schema2",
+    "type": "Schema"
+  }
+]

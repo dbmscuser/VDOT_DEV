@@ -1,0 +1,12 @@
+[
+  {
+    "schema": "",
+    "name": "Schema1",
+    "type": "Schema"
+  },
+  {
+    "schema": "Schema2",
+    "name": "Department",
+    "type": "Table"
+  }
+]
